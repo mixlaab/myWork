@@ -1,0 +1,17 @@
+%% Cargar imagen original
+orig = imread('ejemplo1.jpeg');
+%imshow(orig)
+
+%% Convertir a grises
+orig_gris = rgb2gray(orig);
+[m, n] = size(orig_gris); %Se obtiene número de filas y columnas
+%imshow(orig_gris)
+
+%% Matriz de variaciones
+v = uint810*rand(m,n)-5);
+
+%% Proceso de degradación
+deg_gris = zeros(m,n);
+
+
+
