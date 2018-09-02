@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{donadio:nf}
+M.~Donadio.
+\newblock {How to Generate White Gaussian Noise}.
+\newblock
+  \url{http://dspguru.com/dsp/howtos/how-to-generate-white-gaussian-noise}.
+
+\bibitem{koshiyama:gfs}
+A.~Koshiyama et~al.
+\newblock Gpfis-class: A genetic fuzzy system based on genetic programming for
+  classification problems.
+\newblock {\em Applied Soft Computing}, 37:561--571, 2015.
+
+\bibitem{mumford:intelligentsystems}
+C.~L. Mumford and L.~C. Jain.
+\newblock {\em Computational Intelligence: Collaboration, Fusion and
+  Emergence}.
+\newblock Springer, Berlin, 2009.
+
+\bibitem{odeh:flc}
+S.~M. Odeh et~al.
+\newblock A hybrid fuzzy genetic algorithm for an adaptive traffic signal
+  system.
+\newblock {\em Advances in Fuzzy Systems}, 2015:1--11, August 2015.
+
+\bibitem{pawar:fuzzy}
+P.~M. Pawar and R.~Ganguli.
+\newblock {\em Structural Health Monitoring Using Genetic Fuzzy Systems}.
+\newblock Springer, New York, 2011.
+
+\bibitem{torres:evonorm}
+L.~Torres-T.
+\newblock Evonorm, a new evolutionary algorithm to continuous optimization.
+\newblock 2006.
+
+\bibitem{torres:evonorm3}
+L.~Torres-T.
+\newblock A mathematical model of a cold rolling mill by symbolic regression
+  alpha-beta.
+\newblock November 2014.
+
+\end{thebibliography}

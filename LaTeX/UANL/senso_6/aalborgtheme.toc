@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Repaso}{3}{0}{1}
+\beamer@sectionintoc {2}{Introducci\IeC {\'o}n}{4}{0}{2}
+\beamer@sectionintoc {3}{Merge conflicts}{5}{0}{3}
+\beamer@sectionintoc {4}{Informaci\IeC {\'o}n de contacto}{28}{0}{4}
