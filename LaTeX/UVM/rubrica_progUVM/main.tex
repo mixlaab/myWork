@@ -1,0 +1,167 @@
+\documentclass[11pt,article,landscape]{memoir}
+% Copyright (C) 2013 Andrew Gainer-Dewar <andrew.gainer.dewar@gmail.com>
+% This file may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either
+% version 1.2 of this license or (at your option) any later
+% version. The latest version of this license is in:
+% http://www.latex-project.org/lppl.txt
+% and version 1.2 or later is part of all distributions of[
+% LaTeX version 1999/12/01 or later.
+
+\usepackage{agd-rubric}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyvrb}
+\newbox\verbbox
+
+
+%\rubriccourse{Principios de Programación}
+%\rubriccourse{Eléctronica}
+\rubriccourse{Análsis y Diseño de Circuitos Eléctricos}
+\rubricterm{Licenciatura Semestral Otoño 2018}
+%\rubricthing{Hola mundo}
+%\rubrictopprompt{FIME}
+
+\begin{document}
+
+\setbox\verbbox=\vbox{\hsize=4in
+\begin{Verbatim}
+  if(expresión);{}
+\end{Verbatim}
+}
+
+\maketitle
+
+
+\newpage
+% The argument determines the number of score buckets
+\begin{rubrictable}{4}
+  % Add your \rubricdesc items in increasing order!
+  \rubriccat{Sintaxis}{
+    \rubricdesc{Necesita mejorar}{
+        El programa no es capaz de ser compilado/ejecutado (según sea el caso) pues contiene errores tipográficos en el lenguaje utilizado.
+    }
+    \rubricdesc{Aprendiz}{
+        El programa es capaz de ser compilado/ejecutado pero contiene errores que señalan mal entendimiento de la sintaxis del lenguaje --- tal como poner punto y coma en
+        \textbf{if(expresión);$\left\lbrace\right\rbrace$}\\
+        %\box\verbbox
+    }
+    \rubricdesc{Bien}{
+        El programa es capaz de ser compilado/ejecutado pero contiene código superfluo.
+    }
+    \rubricdesc{Distinguido}{
+        El programa es capaz de ser compilado/ejecutado y no hay evidencia alguna de mal entendimiento o interpretación de la sintaxis del lenguaje.
+    }
+  }
+
+  \rubriccat{Lógica}{
+    \rubricdesc{Necesita mejorar}{
+        El programa contiene algunas condiciones que especifican justamente lo opuesto de lo que es requerido (confundir menor y
+        mayor que). Se confunden los operadores booleanos AND/OR o se provocan loops infinitos.\\
+    }
+    \rubricdesc{Aprendiz}{
+        La lógica del programa va en el camino correcto, no contiene loops infinitos pero no se muestra conocimiento del uso de operadores relacionales (tal como la diferencia entre < y <=)
+    }
+    \rubricdesc{Bien}{
+        La mayoría de la lógica del programa es correcta, pero puede contener algún error ligado a operadores relacionales o condiciones redundantes/contradictorias.
+    }
+    \rubricdesc{Distinguido}{
+        La lógica del programa es correcta, sin errores en casos límite y condiciones redundantes/contradictorias.
+    }
+  }
+  
+  \rubriccat{Exactitud}{
+    \rubricdesc{Necesita mejorar}{
+        El programa no produce las respuestas correctas o resultados apropiados para todos o la mayoría de los datos de entrada.
+    }
+    \rubricdesc{Aprendiz}{
+        El programa se aproxima a las respuestas correctas para la mayoría de los datos de entrada, pero también contiene operaciones erróneas en algunos casos.
+    }
+    \rubricdesc{Bien}{
+        El programa entrega respuestas correctas o resultados apropiados para la mayoría de los datos de entrada.
+    }
+    \rubricdesc{Distinguido}{
+        El programa entrega respuestas correctas o resultados apropiados para todos los datos de entrada de prueba.
+    }
+  }
+
+\end{rubrictable}
+
+\begin{rubrictable}{4}
+  % Add your \rubricdesc items in increasing order!
+  
+  \rubriccat{Completitud}{
+    \rubricdesc{Necesita mejorar}{
+        El programa muestra poco conocimiento de como manejar diferentes casos y funciona solo para un tipo de entrada en particular.
+    }
+    \rubricdesc{Aprendiz}{
+        El programa muestra alguna evidencia de análisis de casos pero puede pasar por alto casos significativos o estar equivocado en el manejo de algunos.\\
+    }
+    \rubricdesc{Bien}{
+       El programa muestra una evidencia del análisis de casos de manera casi completa, pero ha dejado pasar algunos que se pueden presentar de forma inusual.
+    }
+    \rubricdesc{Distinguido}{
+        El programa muestra evidencia de un excelente análisis de casos y todos los casos posibles son manejados apropiadamente.
+    }
+  }
+  
+  \rubriccat{Claridad}{
+    \rubricdesc{Necesita mejorar}{
+        El programa no contiene comentarios que expliquen lineas de relevancia en el código o hace mal uso de las sangrías.
+    }
+    \rubricdesc{Aprendiz}{
+        El programa contiene algunos comentarios (al menos el nombre del estudiante y el propósito del programa en la parte superior) pero se hace ocasionalmente mal uso de la sangría.\\
+    }
+    \rubricdesc{Bien}{
+        El programa contiene comentarios en variables, funciones o bloques de código importantes. Hay pocos errores en el uso de la sangría.
+    }
+    \rubricdesc{Distinguido}{
+        El programa contiene comentarios en los lugares apropiados. El buen uso de la sangría y los espacios en blanco ayudan a que el código sea legible.
+
+    }
+  }
+  
+  \rubriccat{Modularidad}{
+    \rubricdesc{Necesita mejorar}{
+        Todo el programa es una sola función o se ha dividido en funciones que no tienen sentido.
+    }
+    \rubricdesc{Aprendiz}{
+        El programa es dividido en unidades de tamaño apropiado, pero  hace falta coherencia o reusabilidad. El programa contiene repeticiones innecesarias.\\
+    }
+    \rubricdesc{Bien}{
+        El programa es dividido en unidades coherentes, pero todavía existen repeticiones innecesarias.
+    }
+    \rubricdesc{Distinguido}{
+        El programa esta dividido en unidades coherentes y reusables. Las repeticiones innecesarias han sido eliminadas.
+    }
+  }
+  
+  \rubriccat{Documento}{
+    \rubricdesc{Necesita mejorar}{
+        No se incluye documento alguno.
+    }
+    \rubricdesc{Aprendiz}{
+        Se incluye un documento con portada que explica de forma breve el problema a resolver.
+    }
+    \rubricdesc{Bien}{
+        Se incluye un documento con portada que explica de forma breve y clara el problema a resolver.
+    }
+    \rubricdesc{Distinguido}{
+        Se incluye un documento que explica de forma breve y clara el problema a resolver y la manera en que se llegó a la solución.
+    }
+  }
+  
+\end{rubrictable}
+
+Notas:\\
+\begin{itemize}
+    \item Puntaje máximo: 21 puntos.
+    \item La tarea de este tipo consiste en un carpeta comprimida en formato RAR que contenga todos los archivos necesarios para ser evaluada: Archivos del código, imágenes, documento explicativo, etc.
+    \item Para nombrar los archivos que contiene la carpeta comprimida está prohibido usar espacios o caracteres especiales (tales como la ñ). Se puede usar guión bajo para reemplazar los espacios. Si no se cumple con esta regla, la tarea no es válida.
+    \item Si la tarea no contiene datos para reconocer quién la ha entregado, pierde su validez.
+    \item La tarea (carpeta RAR comprimida) se sube antes de la fecha límite a Schoology. También es obligatorio adjuntar el enlace del repositorio subido a la plataforma Github.
+    \item El plagio es razón suficiente para invalidar la tarea. Hacerlo tendrá por penalización la invalidez de las tareas que se han entregado anteriormente. Consultar el siguiente enlace para más información: https://scielo.conicyt.cl/scielo.php?script=sci\_arttext\&pid=S0718-07642008000400001
+\end{itemize}
+
+
+
+\end{document}

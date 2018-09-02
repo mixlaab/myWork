@@ -1,0 +1,294 @@
+\documentclass[10pt]{beamer}
+\usetheme[
+%%% options passed to the outer theme
+%    hidetitle,           % hide the (short) title in the sidebar
+%    hideauthor,          % hide the (short) author in the sidebar
+%    hideinstitute,       % hide the (short) institute in the bottom of the sidebar
+%    shownavsym,          % show the navigation symbols
+%    width=2cm,           % width of the sidebar (default is 2 cm)
+%    hideothersubsections,% hide all subsections but the subsections in the current section
+%    hideallsubsections,  % hide all subsections
+%    left                % right of left position of sidebar (default is right)
+  ]{Aalborg}
+  
+% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
+% Change the bar and sidebar colors:
+%\setbeamercolor{Aalborg}{fg=red!20,bg=red}
+%\setbeamercolor{sidebar}{bg=red!20}
+% Change the color of the structural elements:
+%\setbeamercolor{structure}{fg=red}
+% Change the frame title text color:
+%\setbeamercolor{frametitle}{fg=blue}
+% Change the normal text color background:
+%\setbeamercolor{normal text}{bg=gray!10}
+% ... and you can of course change a lot more - see the beamer user manual.
+
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{helvet}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+
+\usepackage{minted}
+
+
+\usepackage{listings}
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+
+% colored hyperlinks
+\newcommand{\chref}[2]{%
+  \href{#1}{{\usebeamercolor[bg]{Aalborg}#2}}%
+}
+
+\title[Electrónica]% optional, use only with long paper titles
+{Electrónica}
+
+\subtitle{Evaluación}  % could also be a conference name
+
+\date{\today}
+
+\author[Víctor Medrano Zarazúa] % optional, use only with lots of authors
+{
+  Víctor Medrano Zarazúa\\
+  \href{mailto:victor_medrano@my.uvm.edu.mx}{{\tt victor\_medrano@my.uvm.edu.mx}}
+}
+% - Give the names in the same order as they appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation. See the beamer manual for an example
+
+\institute[
+%  {\includegraphics[scale=0.2]{aau_segl}}\\ %insert a company, department or university logo
+  %Dept.\ of Electronic Systems\\
+  Universidad del Valle de México\\
+  Campus Monterrey
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the bottom of the title page
+  %Department of Electronic Systems\\
+  Universidad del Valle de México\\
+  Campus Monterrey
+  %Universidad Autónoma de Nuevo León\\
+  %Facultad de Ingeniería Mecánica y Eléctrica
+  
+  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+% specify the logo in the top right/left of the slide
+\pgfdeclareimage[height=1cm]{mainlogo}{AAUgraphics/UVM} % placed in the upper left/right corner
+\logo{\pgfuseimage{mainlogo}}
+
+% specify a logo on the titlepage (you can specify additional logos an include them in 
+% institute command below
+\pgfdeclareimage[height=1.5cm]{titlepagelogo}{AAUgraphics/UVM} % placed on the title page
+%\pgfdeclareimage[height=1.5cm]{titlepagelogo2}{AAUgraphics/aau_logo_new} % placed on the title page
+\titlegraphic{% is placed on the bottom of the title page
+  \pgfuseimage{titlepagelogo}
+%  \hspace{1cm}\pgfuseimage{titlepagelogo2}
+}
+
+%\definecolor{UniBlue}{RGB}{255,255,255}
+
+\tikzset{
+block/.style={
+  draw, 
+  fill=blue!20, 
+  rectangle, 
+  minimum height=3em, 
+  minimum width=6em
+  },
+ gain/.style={
+    draw,
+    fill=blue!20, 
+    isosceles triangle,
+    minimum height = 3em,
+    isosceles triangle apex angle=60
+    },
+sum/.style={
+  draw, 
+  fill=blue!20, 
+  circle, 
+  },
+input/.style={coordinate},
+output/.style={coordinate},
+pinstyle/.style={
+  pin edge={to-,thin,black}
+  }
+}  
+
+\begin{document}
+% the titlepage
+
+
+%\setbeamercolor{title}{fg=UniBlue}
+%\setbeamercolor{normal text}{fg=UniBlue}
+%\setbeamercolor{Aalborg}{fg=black,bg=black}
+
+
+{\aauwavesbg
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+  \titlepage
+\end{frame}}
+%%%%%%%%%%%%%%%%
+
+% TOC
+%\begin{frame}{Problemas}{}
+%\tableofcontents
+%\end{frame}
+%%%%%%%%%%%%%%%%
+
+
+\section{Evaluación}
+\begin{frame}{Evaluación}{General}
+
+\begin{columns}[c]
+\column{1.7in}
+\begin{block}{Primer Parcial}
+\begin{itemize}
+    \item Examen (40\%)
+    \item Tareas (40\%)
+    \item Participación (20\%)
+\end{itemize}
+\end{block}
+
+\begin{block}{Segundo Parcial}
+\begin{itemize}
+    \item Examen (40\%)
+    \item Tareas (40\%)
+    \item Participación (20\%)
+\end{itemize}
+\end{block}
+
+\column{1.7in}
+\begin{block}{Tercer Parcial}
+\begin{itemize}
+    \item Proyecto (50\%)
+    \item Examen (20\%)
+    \item Tareas (20\%)
+    \item Participación (10\%)
+\end{itemize}
+\end{block}
+
+
+\end{columns}
+\end{frame}
+
+\section{Examen}
+\begin{frame}{Examen}{Estructura}
+\begin{block}{Teórico (50\%)}
+    \begin{itemize}
+        \item Abiertas
+        \item De opción múltiple
+    \end{itemize}
+\end{block}
+
+\begin{block}{Práctico (50\%)}
+    \begin{itemize}
+        \item Solución de problemas haciendo uso de análisis y operaciones matemáticas.
+        \item Solución de problemas por medio de un algoritmo computacional.
+    \end{itemize}
+\end{block}
+
+\end{frame}
+
+\section{Tareas}
+\begin{frame}{Tareas}{Aclaraciones}
+\begin{block}{Uso de rúbricas}
+    \begin{itemize}
+        \item Investigación
+        \item Cuestionario
+        \item Algoritmo computacional
+        \item Problemas
+    \end{itemize}
+\end{block}
+
+\begin{block}{Entrega}
+    \begin{itemize}
+        \item Schoology
+        \item Documentos en formato PDF
+        %\item Portafolio en Github
+        \item Una semana p/ entregar
+    \end{itemize}
+\end{block}
+
+\end{frame}
+
+\section{Participación}
+\begin{frame}{Participación}{Reglamento}
+\begin{block}{Reglas p/ participación}
+    \begin{itemize}
+        \item Participación voluntaria (+1)
+        \item Estudiante pasa al azar (+1)
+        \item Estudiante se niega a pasar (-1)
+        \item Estudiante no asistió y le toca pasar (-3)
+    \end{itemize}
+\end{block}
+
+\end{frame}
+
+\section{Proyecto}
+\begin{frame}{Proyecto}{Vehículo aéreo no tripulado}
+\begin{block}{Requisitos generales del proyecto}
+    \begin{itemize}
+        \item Vehículo permanece estable durante el vuelo.
+        \item Puede ser controlado manualmente o funcionar de manera autónoma.
+        \item Está permitido el uso de tarjetas controladoras de vuelo.
+        \item Estructura es diseñada en CAD (e.g. SolidWorks, OnShape, etc.)
+        \item Se entrega un reporte con todos los detalles sobre el proyecto.
+    \end{itemize}
+\end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{Información de contacto}
+% contact information
+\begin{frame}{Feedback}{Información de contacto}
+En caso de comentarios, sugerencias, preguntas o errores en las diapositivas no dudes en contactarme.
+  \begin{center}
+    \insertauthor\\
+    \chref{https://mixlaab.github.io}{https://mixlaab.github.io}\\
+    WA: 8119022700\\
+    %9220 Aalborg Ø
+  \end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%
+
+{\aauwavesbg%
+\begin{frame}[plain,noframenumbering]%
+  \finalpage{Fin}
+\end{frame}}
+%%%%%%%%%%%%%%%%
+
+\end{document}

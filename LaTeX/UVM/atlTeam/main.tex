@@ -1,0 +1,182 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.3, 30 April 2017) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+\documentclass[10pt,a4paper,normalphoto]{altacv}
+
+%\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{hyperref}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+%\definecolor{Mulberry}{HTML}{72243D}
+%\definecolor{SlateGrey}{HTML}{2E2E2E}
+%\definecolor{LightGrey}{HTML}{666666}
+%\colorlet{heading}{Sepia}
+%\colorlet{accent}{Mulberry}
+%\colorlet{emphasis}{SlateGrey}
+%\colorlet{body}{LightGrey}
+
+\definecolor{Mulberry}{HTML}{227DC4}%EEDD83
+\definecolor{SlateGrey}{HTML}{A11874}%A7432C
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{SlateGrey}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{Black}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Equipo Atl}
+\tagline{\textit {"La palabra Atl proviene del náhuatl y significa: ‘agua’, ‘fuente de vida’. Es uno de los vocablos que podemos encontrar con mayor frecuencia en nuestra cultura debido al gran simbolismo e importancia del agua."}}
+\photo{6cm}{atl}
+
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+\makecvheader
+
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+%\cvsection[page1sidebar]{Miembros oficiales}
+\cvsection{Miembros oficiales}
+
+\cvevent{Víctor de Jesús Medrano Zarazúa (611808)}{Coach del equipo}
+\begin{itemize}
+\vspace{-0.6cm}
+\item Recibió los grados de licenciatura y maestría en la Universidad Autónoma de Nuevo León. Ha estado involucrado en proyectos de robótica desde 2009. Su mayor interés es acercar la ciencia a los demás en formas innovadoras y didácticas.
+\end{itemize}
+
+\divider
+
+\cvevent{Luis Gonzalo Morales García (870093314)}{Líder del equipo}
+\begin{itemize}
+\vspace{-0.6cm}
+\item Ha estado involucrado en proyectos de robótica desde 2013 y ha participado en varias ediciones del torneo RoboCup (categoría OnStage): Eindhoven, Holanda (2013), João Pessoa, Brasil (2014), Hefei, China (2015), Leipzig, Alemania (2016), Nagoya, Japón (2017) y dos competencias nacionales en Pánama.
+\end{itemize}
+
+\divider
+
+\cvevent{Diana Karen Basilio Beltrán (870015144)}{Miembro del equipo}
+\begin{itemize}
+\vspace{-0.6cm}
+\item Es una estudiante de primer año involucrada en la robótica desde 2017. Ganó el primer lugar de su generación en Prepa UVM. Está completamente dispuesta a aprender y colaborar activamente con los miembros del equipo.
+\end{itemize}
+
+\divider
+
+\cvevent{Luis Gerardo Reyes Cervantes (870107314)}{Miembro del equipo}
+\begin{itemize}
+\vspace{-0.6cm}
+\item Es un estudiante de primer año con estudios técnicos en electrónica. Tiene la voluntad y deseo de participar en diferentes competencias de robótica.
+\end{itemize}
+
+\begin{comment}
+\divider
+
+\cvevent{Mariana Zul Rivera (870095461)}{Miembro del equipo}
+\begin{itemize}
+\vspace{-0.6cm}
+\item Es una estudiante de primer año que se ha involucrado en la robótica desde 2012. Junto a su equipo ganó el premio a mejor diesño mecánico en el torneo internacional de RoboCup de Leipzig, Alemania 2016 (\href{http://www.excelsior.com.mx/nacional/2016/07/14/1104968} {dar clic para ver noticia}). Actualmente trabaja como maestra de robótica para niños.
+\end{itemize}
+
+\end{comment}
+
+
+\cvsection{Miembros auxiliares}
+
+\cvevent{Orquídea Margarita Solís González (344711)}{Administradora del equipo}
+\begin{itemize}
+\vspace{-0.6cm}
+\item Recibió los grados de licenciatura y maestría en el Tecnológico de Monterrey. Actualmente es profesora de tiempo completo en la Universidad del Valle de México. Se encarga de supervisar las labores del equipo y administrar, así como de dar soporte y retroalimentación al equipo.
+\end{itemize}
+
+\divider
+
+\cvevent{Luciano Andrés Alfaro Rodríguez (236001749)}{Coach externo del equipo}
+\begin{itemize}
+\vspace{-0.6cm}
+\item Es un estudiante graduado de la Universidad del Valle de México. Está interesado en compartir sus conocimientos con la comunidad de la Universidad en la cuál se formó. Tiene amplia experiencia en el área de diseño mecánico y la electrónica.
+\end{itemize}
+
+
+\cvsection{Nuestra filosofía}
+
+\begin{quote}
+``Hay hombres que luchan un día y son buenos. Hay otros que luchan un año y son mejores. Hay quienes luchan muchos años, y son muy buenos. Pero los hay que luchan toda la vida: esos son los imprescindibles'' -- Bertolt Brecht
+\end{quote}
+
+\end{fullwidth}
+%\clearpage
+%\cvsection[page2sidebar]{Publications}
+
+%\nocite{*}
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+%\divider
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
+
+%\divider
+
+%\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+%\addnextpagesidebar[-1ex]{page3sidebar}
+
+\end{document}

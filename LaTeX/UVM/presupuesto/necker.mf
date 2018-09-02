@@ -1,0 +1,187 @@
+%%% @mffile{
+%%%     filename="necker.mf",
+%%%     version="",
+%%%     date="",
+%%%     filetype="mf fontcreator",
+%%%     package="m-capbas.arj"
+%%%     author="Phons Bloemen (PhB)",
+%%%     address="Eindhoven U. of Technology"
+%%%     email="Internet: phons@ei.ele.tue.nl",
+%%%     codetable="ISO/ASCII",
+%%%     checksumtype="none",
+%%%     checksum="0",
+%%%     keywords="",
+%%%     abstract="
+%%%        Generates necker font, a 5x7 grid font.
+%%%        This font was used on old terminals (Adm3a, the 'egg')
+%%%        It is also used on flip-dot displays on buses, reason
+%%%        why i called it 'Necker'. The Eindhoven bus station
+%%%        is called 'Neckerspoel', and has futuristic route
+%%%        indicators using this font.
+%%%        Part of Capital Baseball package"
+%%%     copyright="Copyleft (L) Phons Bloemen (PhB),
+%%%        according to GNU public licence version 2 or later.
+%%%        (1) Do not change this file (even its name)
+%%%        (2) if you do make changes, first rename it to some
+%%%            other name, and mark your changes clearly.",
+%%%     }
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% if unknown cmbase: input cmbase fi
+%% mode_setup;
+%% def generate suffix t= enddef;
+%% input cmtt10; font_setup;
+%% get some definitions from cmtt10 for proper setup
+%% do not ask why this sequence is used, it works!
+
+mode_setup;
+
+if unknown gensize: gensize := 10; fi;
+em# := gensize * 0.3pt#;
+uu# := 0.3 em#;
+font_coding_scheme:="TeX text";
+font_identifier:="NECKER";
+font_size gensize * 1pt#;
+body_height#:=5uu#;  % height of tallest characters
+asc_height#:=5uu#;    % height of lowercase ascenders
+cap_height#:=5uu#;    % height of caps
+fig_height#:=5uu#;    % height of numerals
+x_height#:=4uu#;    % height of lowercase without ascenders
+math_axis#:=3uu#;    % axis of symmetry for math symbols
+bar_height#:=3uu#;    % height of crossbar in lowercase e
+comma_depth#:=1uu#;    % depth of comma below baseline
+desc_depth#:=1uu#;    % depth of lowercase descenders
+%% monospace := false;
+%% font_setup;
+font_normal_space 4uu#;
+font_quad 18uu#;
+font_extra_space 4uu#;
+
+%%% This draws the dot matrix (a generic function, can
+%%% be used for many dot matrix characters).
+%%% Parameters of 'flychar':
+%%%     c : character number (decimal)
+%%%     k : # dots horizontal ('width')           0  1  2  3
+%%%     l : # dots vertical ('height')            4  5  6  7
+%%%     m : # dots descender ('depth')            8  9 10 11
+%%%     t : sequence of dot numbers to set.      12 13 14 15
+%%%         Dot numbering of a 4 x 5 'flychar':  16 17 18 19
+
+def flychar(expr c,k,l,m)(text t) =
+beginchar((char c), (k+1)*uu#, l*uu#, m*uu#);
+   clearit;
+   pickup pencircle xscaled (w/(k+1)) yscaled((h+d)/(l+m));
+   for a = t :
+      drawdot((0.5+(a mod k))*w/(k+1),h-((0.5+floor(a/k))*(h+d)/(l+m)));
+   endfor;
+endchar;
+enddef;
+
+%%% The space character is special
+
+beginchar(32,4*uu#,5*uu#,0);
+endchar;
+
+%%% The 'flychar' characters follow (upper and lower case!)
+
+flychar(33,1,7,0)(0,1,2,3,4,6);
+flychar(34,3,7,0)(0,2,3,5);
+flychar(35,5,7,0)(1,3,6,8,10,11,12,13,14,16,18,20,21,22,23,24,26,28,31,33)
+flychar(36,5,7,0)(2,6,7,8,10,12,16,17,18,22,24,26,27,28,32);
+flychar(37,5,7,0)(0,1,5,6,9,13,17,21,25,28,29,33,34);
+flychar(38,5,7,0)(1,5,7,10,12,16,20,22,24,25,28,31,32,34);
+flychar(39,2,7,0)(1,2);
+flychar(40,3,7,0)(2,4,6,9,12,16,20);
+flychar(41,3,7,0)(0,4,8,11,14,16,18);
+flychar(42,5,7,0)(7,10,12,14,16,17,18,20,22,24,27);
+flychar(43,5,7,0)(7,12,15,16,17,18,19,22,27);
+flychar(44,2,2,1)(0,1,3,4);
+flychar(45,5,7,0)(15,16,17,18,19);
+flychar(46,2,2,0)(0,1,2,3);
+flychar(47,5,7,0)(9,13,17,21,25);
+flychar(48,5,7,0)(1,2,3,5,9,10,13,14,15,17,19,20,21,24,25,29,31,32,33);
+flychar(49,3,7,0)(1,3,4,7,10,13,16,18,19,20);
+flychar(50,5,7,0)(1,2,3,5,9,14,18,22,26,30,31,32,33,34);
+flychar(51,5,7,0)(0,1,2,3,4,5,9,13,17,18,24,25,29,31,32,33);
+flychar(52,5,7,0)(3,7,8,11,13,15,18,20,21,22,23,24,28,33);
+flychar(53,5,7,0)(0,1,2,3,4,5,10,11,12,13,19,24,25,29,31,32,33);
+flychar(54,5,7,0)(2,3,6,10,15,16,17,18,20,24,25,29,31,32,33);
+flychar(55,5,7,0)(0,1,2,3,4,9,13,17,22,27,32);
+flychar(56,5,7,0)(1,2,3,5,9,10,14,16,17,18,20,24,25,29,31,32,33);
+flychar(57,5,7,0)(1,2,3,5,9,10,14,16,17,18,19,24,28,31,32);
+flychar(58,2,5,0)(0,1,2,3,6,7,8,9);
+flychar(59,2,5,1)(0,1,2,3,6,7,9,10);
+flychar(60,4,7,0)(3,6,9,12,17,22,27);
+flychar(61,5,7,0)(10,11,12,13,14,20,21,22,23,24);
+flychar(62,4,7,0)(0,5,10,15,18,21,24);
+flychar(63,5,7,0)(1,2,3,5,9,14,17,22,32);
+flychar(64,5,7,0)(1,2,3,5,9,10,12,1,14,15,17,19,20,22,23,24,25,31,32,33,34);
+flychar(65,5,7,0)(1,2,3,5,9,10,14,15,16,17,18,19,20,24,25,29,30,34);
+flychar(66,5,7,0)(0,1,2,3,5,9,10,14,15,16,17,18,20,24,25,29,30,31,32,33);
+flychar(67,5,7,0)(1,2,3,9,5,10,15,20,25,31,32,33,29);
+flychar(68,5,7,0)(0,1,2,3,5,9,10,14,15,19,20,24,25,29,30,31,32,33);
+flychar(69,5,7,0)(0,1,2,3,4,5,10,15,16,17,18,20,25,30,31,32,33,34);
+flychar(70,5,7,0)(0,1,2,3,4,5,10,15,16,17,18,20,25,30);
+flychar(71,5,7,0)(1,2,3,5,9,10,15,18,19,20,24,25,29,31,32,33);
+flychar(72,5,7,0)(0,4,5,9,10,14,15,16,17,18,19,20,24,25,29,30,34);
+flychar(73,3,7,0)(0,1,2,4,7,10,13,16,18,19,20);
+flychar(74,5,7,0)(4,9,14,19,24,25,29,31,32,33);
+flychar(75,5,7,0)(0,4,5,8,10,12,15,16,20,22,25,28,30,34);
+flychar(76,5,7,0)(0,5,10,15,20,25,30,31,32,33,34);
+flychar(77,5,7,0)(0,4,5,6,8,9,10,12,14,15,17,19,20,24,25,29,30,34);
+flychar(78,5,7,0)(0,4,5,9,10,11,14,15,17,19,20,23,24,25,29,30,34);
+flychar(79,5,7,0)(1,2,3,5,9,10,14,15,19,20,24,25,29,31,32,33);
+flychar(80,5,7,0)(0,1,2,3,5,9,10,14,15,16,17,18,20,25,30);
+flychar(81,5,7,0)(1,2,3,5,9,10,14,15,19,20,22,24,25,28,31,32,34);
+flychar(82,5,7,0)(0,1,2,3,5,9,10,14,15,16,17,18,20,22,25,28,30,34);
+flychar(83,5,7,0)(1,2,3,5,9,10,16,17,18,24,25,29,31,32,33);
+flychar(84,5,7,0)(0,1,2,3,4,7,12,17,22,27,32);
+flychar(85,5,7,0)(0,4,5,9,10,14,15,19,20,24,25,29,31,32,33);
+flychar(86,5,7,0)(0,4,5,9,10,14,16,18,21,23,27,32);
+flychar(87,5,7,0)(0,4,5,9,10,14,15,17,19,20,22,24,25,26,28,29,31,33);
+flychar(88,5,7,0)(0,4,5,9,11,13,17,21,23,25,29,30,34);
+flychar(89,5,7,0)(0,4,5,9,11,13,17,22,27,32);
+flychar(90,5,7,0)(0,1,2,3,4,9,13,17,21,25,30,31,32,33,34);
+flychar(91,2,7,0)(0,1,2,4,6,8,10,12,13);
+flychar(92,5,7,0)(5,11,17,23,29);
+flychar(93,2,7,0)(0,1,3,5,7,9,11,12,13);
+flychar(94,3,7,0)(1,3,5);
+flychar(95,5,1,1)(5,6,7,8,9);
+flychar(96,2,7,0)(1,2);
+flychar(97,5,5,0)(1,2,5,8,10,13,15,18,21,22,24);
+flychar(98,5,7,0)(0,5,10,11,12,13,15,19,20,24,25,29,30,31,32,33);
+flychar(99,5,5,0)(1,2,3,5,9,10,15,21,22,23,24);
+flychar(100,5,7,0)(4,9,11,12,13,14,15,19,20,24,25,29,31,32,33,34);
+flychar(101,5,5,0)(1,2,3,5,9,10,11,12,13,15,21,22,23);
+flychar(102,3,7,0)(2,4,7,9,10,11,13,16,19);
+flychar(103,5,5,1)(1,2,3,4,5,9,10,14,16,17,18,19,24,27,28);
+flychar(104,5,7,0)(0,5,10,11,12,13,15,19,20,24,25,29,30,34);
+flychar(105,2,7,0)(1,4,5,7,9,11,13);
+flychar(106,2,7,1)(1,4,5,7,9,11,13,14);
+flychar(107,5,7,0)(0,5,10,14,15,18,20,21,22,25,28,30,34);
+flychar(108,2,7,0)(0,2,4,6,8,10,12,13);
+flychar(109,5,5,0)(1,3,5,7,9,10,12,14,15,19,20,24);
+flychar(110,5,5,0)(0,1,2,3,5,9,10,14,15,19,20,24);
+flychar(111,5,5,0)(1,2,3,5,9,10,14,15,19,21,22,23);
+flychar(112,5,5,1)(1,2,3,5,9,10,14,15,16,17,18,20,25);
+flychar(113,5,5,1)(1,2,3,5,9,10,14,16,17,18,19,24,29);
+flychar(114,5,5,0)(0,2,3,5,6,9,10,15,20);
+flychar(115,5,5,0)(1,2,3,5,11,12,13,19,20,21,22,23);
+flychar(116,3,7,0)(3,6,7,8,9,12,15,17,19);
+flychar(117,5,5,0)(0,4,5,9,10,14,15,19,21,22,23);
+flychar(118,5,5,0)(0,4,5,9,11,13,16,18,22);
+flychar(119,5,5,0)(0,4,5,9,10,12,14,15,16,18,19,21,23);
+flychar(120,5,5,0)(0,4,6,8,12,16,18,20,24);
+flychar(121,5,5,1)(0,4,5,9,10,14,16,17,18,19,24,27,28);
+flychar(122,5,5,0)(0,1,2,3,4,8,12,16,20,21,22,23,24);
+flychar(123,3,7,0)(2,4,7,9,13,16,20);
+flychar(124,1,7,0)(0,1,2,3,4,5,6);
+flychar(125,3,7,0)(0,4,7,11,13,16,18);
+flychar(126,5,7,0)(1,4,5,7,8);
+
+bye.
+
+
+

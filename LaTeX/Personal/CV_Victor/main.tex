@@ -1,0 +1,173 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[activeacute,spanish]{babel} 
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Ing. Víctor} % Your first name
+\familyname{Medrano} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Col. Residencial Periférico, Guadalupe Victoria No. 543}{San Nicolás de los Garza, Nuevo León, México}
+\mobile{(044) 811 902 2700}
+\phone{(81) 8332 2993}
+%\fax{}
+\email{vdejesusmedrano@gmail.com}
+%\homepage{}{} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+\photo[70pt][0.4pt]{foto_CV2} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\quote{"Sé curioso. Lee ampliamente. Intenta cosas nuevas. Lo que la gente llama inteligencia sólo se reduce a curiosidad." - Aaron Swartz}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Educación}
+
+\cventry{2015--}{Maestría en Ciencias de la Ingeniería Eléctrica}{Universidad Autónoma de Nuevo León}{Facultad de Ingeniería Mecánica y Eléctrica}{\textit{Promedio actual: 92.5}}{Orientado a Mecatrónica}
+
+\cventry{2009--2014}{Ingeniería en Mecatrónica}{Universidad Autónoma de Nuevo León}{Facultad de Ingeniería Mecánica y Eléctrica}{\textit{Promedio General: 93}}{}  % Arguments not required can be left empty
+\cventry{2007--2009}{Bachillerato General}{Universidad Autónoma de Nuevo León}{Preparatoria No. 7 ``Unidad Las Puentes''}{\textit{Promedio General: 98}}{}
+
+%\section{Masters Thesis}
+
+%\cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
+%\cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
+%\cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experiencia laboral}
+
+%\subsection{Vocational}
+
+\cventry{2014}{Ingeniero de Servicio}{NTECH Monterrey}{Apodaca}{Nuevo León}{Reparación y mantenimiento de equipo electrónico. Realizar cableado para el retrofit de máquinas universales.}
+
+%------------------------------------------------
+
+\cventry{2013--2014}{Practicante del Departamento de Electrónica}{Sistemas Automotrices Mexicanos, S.A. de C.V.}{Escobedo}{Nuevo León}{Reparación de equipo electrónico y apoyo en el desarrollo de nuevos proyectos del departamento.}
+
+%------------------------------------------------
+
+\cventry{2012--2013}{Practicante del área de calidad}{Enerya, S.A. de C.V.}{Santa Catarina}{Nuevo León}{Documentación y desarrollo de estadística relacionada a ventas, satisfacción del cliente y merma.}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Awards}
+
+%\cvitem{2011}{School of Business Postgraduate Scholarship}
+%\cvitem{2010}{Top Achiever Award -- Commerce}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Habilidades Computacionales}
+
+\cvitem{Básico}{Linux, Visual Basic, SolidWorks, Python, Processing}
+\cvitem{Intermedio}{\LaTeX, LabVIEW, C}
+\cvitem{Avanzado}{Windows, MATLAB, Arduino}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Communication Skills}
+
+%\cvitem{2010}{Oral Presentation at the California Business Conference}
+%\cvitem{2009}{Poster at the Annual Business Conference in Oregon}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Idiomas}
+
+\cvitemwithcomment{Español}{Lengua Materna}{}
+\cvitemwithcomment{Inglés}{Avanzado}{}
+\cvitemwithcomment{Alemán}{Básico}{}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Intereses y aficiones}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Electrónica}{Lectura}
+\cvlistdoubleitem{Películas}{Programación}
+\cvlistdoubleitem{Tocar piano}{Escuchar música}
+
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+%\makelettertitle % Print letter title
+
+%\lipsum[1-3] % Dummy text
+
+%\makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

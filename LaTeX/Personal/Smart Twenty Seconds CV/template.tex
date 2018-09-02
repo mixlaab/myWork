@@ -1,0 +1,168 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.0 (14/7/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com) and Harsh Gadgil
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+% Command for printing skill progress bars
+\newcommand\skills{ 
+~
+	\smartdiagram[bubble diagram]{
+        \textbf{Experience},%\\\textbf{},
+        \textbf{~~MATLAB~~},%\\\textbf{}\\\textbf{},
+        \textbf{~~Robotics~~},%~
+        \textbf{~~Arduino~~},
+        \textbf{~~~Python~~~},%\\\textbf{Learning},
+        \textbf{~~~~~C++~~~~~},%\\\textbf{~~Automation~~},
+        \textbf{GNU/Linux}%\\\textbf{Analysis}
+    }
+}
+
+\interests{{Music/4.5},{Education/5},{Electronics/6},{Programming/6}}
+\languages{{German/2.5},{English/5},{Spanish/6}}
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+
+
+\cvname{Víctor Medrano} % Your name
+\cvjobtitle{Mechatronics Engineer} % Job title/career
+
+\cvlinkedin{https://linkedin.com/in/vdejesusmedrano}
+\cvnumberphone{+52 811 902 2700} % Phone number
+\cvsite{http://mixlaab.github.io/} % Personal website
+\cvmail{vdejesusmedrano@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    	{Expected \\ Jun 2017}
+        {MSc., Electrical Engineering}
+        {\href{http://www.uanl.mx/}{Universidad Autónoma de Nuevo León}}
+        {San Nicolás de los Garza, Nuevo León, México}
+        {\textit{Mechatronics Oriented}}
+	\twentyitem
+    	{2009 - 2014}
+        {BEng., Mechatronics Engineering}
+        {\href{http://www.uanl.mx/}{Universidad Autónoma de Nuevo León}}
+        {San Nicolás de los Garza, Nuevo León, México}
+        {\textit{Biodevices Oriented}}
+	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+\end{twenty}
+
+
+\section{Research}
+\begin{twenty}
+	\twentyitem
+    	{2016 - 2017}
+        {MSc., Thesis Research}
+        {\href{http://www.uanl.mx/}{Universidad Autónoma de Nuevo León}}
+        {}
+        {
+        {\begin{itemize}
+        \item Proposed an scheme to improve the hover stabilization response of a quadcopter by evaluating the same response and adjusting the gains of a PID controller through a fuzzy logic system.
+        \item A prototype of the vehicle was built to obtain experimental results.
+        %\item Proposed a novel method to reliably integrate large, noisy datasets. Evaluated the method on datasets containing six million records
+        \item A manuscript of the paper submitted to IEEE Transactions on Fuzzy Systems is waiting to be in the review process.
+    \end{itemize}}
+        }
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+    \twentyitem
+    	{2017}
+        {College Professor}
+        {\href{}{Many universities}}
+        {}
+        {
+        {\begin{itemize}
+        \item Teaching Electronics, Programming, Math and Physics at Universidad del Valle de México, Universidad Pedro de Gante and CEDUK.
+    \end{itemize}}
+        }
+        
+	\twentyitem
+    	{2014}
+        {Field Service Engineer}
+        {\href{http://www.ntech-mty.mx/}{NTECH Monterrey}}
+        {}
+        {
+        {\begin{itemize}
+        \item Maintenance and repair of electronic equipment.
+        \item Retrofitting of universal testing machines.
+    \end{itemize}}
+        }
+        
+    \twentyitem
+   		{2013-2014}
+        {Electronics Engineering Internship}
+        {\href{http://www.sisamex.com.mx/es/}{SISAMEX}}
+        {}
+        {
+        {\begin{itemize}
+        \item Repairing of electronic equipment.
+        \item Help in the development of new projects of the Electronics Department.
+    \end{itemize}}
+        }
+        
+     \twentyitem
+   		{2012-2013}
+        {Quality Engineering Internship}
+        {\href{http://www.grupogonher.com/empresas.html}{Enerya}}
+        {}
+        {
+        \begin{itemize}
+        \item Documentation of statistics related to sales, customer satisfaction and waste.
+    \end{itemize}
+    	}
+        
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+
+\section{Hobbies}
+
+\begin{itemize}
+    \item \textbf{Watch films \& series.}
+    \item \textbf{Learn new programming languages.}
+    \item \textbf{Learn more about electronics.}
+    \item \textbf{Read about science, arts and diverse topics.}
+    \item \textbf{Play piano and produce music.}
+\end{itemize}
+
+\end{document} 

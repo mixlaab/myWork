@@ -1,0 +1,38 @@
+\documentclass[twoside,twocolumn]{article}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{stfloats} % for positioning of figure* on the same page
+\usepackage{lipsum}
+
+\begin{document}
+%\lipsum[1]
+    \begin{figure*}[b]
+\begin{subfigure}{0.48\linewidth}
+    \includegraphics[scale = 0.5]{justme.jpg}
+\caption{Figure A}
+    \label{fig:a}
+\end{subfigure}
+    \hfill
+\begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth, height=0.5\linewidth]{example-image-b}
+\caption{Figure B}
+    \label{fig:b}
+\end{subfigure}
+
+\begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth, height=0.5\linewidth]{example-image-C}
+\caption{Figure C}
+    \label{fig:c}
+\end{subfigure}
+    \hfill
+\begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth, height=0.5\linewidth]{example-image}
+\caption{Figure D}
+    \label{fig:d}
+\end{subfigure}
+\caption{Common caption}
+\lipsum[11]
+\end{figure*}
+\lipsum*[2-5]
+\end{document}

@@ -1,0 +1,148 @@
+\documentclass[11pt,article,landscape]{memoir}
+% Copyright (C) 2013 Andrew Gainer-Dewar <andrew.gainer.dewar@gmail.com>
+% This file may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either
+% version 1.2 of this license or (at your option) any later
+% version. The latest version of this license is in:
+% http://www.latex-project.org/lppl.txt
+% and version 1.2 or later is part of all distributions of[
+% LaTeX version 1999/12/01 or later.
+
+\usepackage{agd-rubric}
+\usepackage[utf8]{inputenc}
+
+\rubriccourse{Percepción}
+\rubricterm{Agosto-Diciembre 2018}
+%\rubricthing{Hola mundo}
+%\rubrictopprompt{FIME}
+
+\begin{document}
+\maketitle
+
+\newpage
+% The argument determines the number of score buckets
+\begin{rubrictable}{4}
+  % Add your \rubricdesc items in increasing order!
+  \rubriccat{Trabajo completo (x2)}{
+    \rubricdesc{Necesita mejorar}{
+    El trabajo está incompleto y no funciona.
+
+    }
+    \rubricdesc{Aprendiz}{
+      El trabajo está completo pero no funciona y necesita modificaciones severas.
+    }
+    \rubricdesc{Bien}{
+      El trabajo está completo y funciona. Solo necesita algunas modificaciones.
+    }
+    \rubricdesc{Distinguido}{
+        El trabajo está completado al 100\% y funciona de acuerdo a lo descrito.
+    }
+  }
+
+  \rubriccat{Lineamientos (x2)}{
+    \rubricdesc{Necesita mejorar}{
+        No estaba enterado de los lineamientos que se debían seguir.
+    }
+    \rubricdesc{Aprendiz}{
+        No sigue varios lineamientos o ignora lineamientos en los que se hizo énfasis.\\
+    }
+    \rubricdesc{Bien}{
+        Sigue la mayoría de los lineamientos.
+    }
+    \rubricdesc{Distinguido}{
+        Sigue lineamientos al pie de la letra.
+    }
+  }
+  
+  \rubriccat{Conocimiento teórico / Presentación por equipos (x2)}{
+    \rubricdesc{Necesita mejorar}{
+        No es capaz de identificar o explicar cualquier teoría relacionada con el proyecto.
+    }
+    \rubricdesc{Aprendiz}{
+        Es capaz de identificar la teoría relacionada con el proyecto, pero se le dificulta explicar como funciona en sus propias palabras.\\
+    }
+    \rubricdesc{Bien}{
+        Es capaz de identificar y explicar la teoría necesaria para completar el proyecto con algo de ayuda.
+    }
+    \rubricdesc{Distinguido}{
+        Es capaz de identificar y explicar la teoría necesaria para completar el proyecto de forma convincente.
+    }
+    }
+    
+    
+    \rubriccat{Admón. de tiempo}{
+    \rubricdesc{Necesita mejorar}{
+        No entrega el proyecto a tiempo por procrastinar.\\\\
+        NOTA: Es necesario entregar evidencia de avance para demostrar que el proyecto no se hizo a última hora.
+    }
+    \rubricdesc{Aprendiz}{
+        Entrega evidencias de avance de manera irregular. No entrega el proyecto en la fecha acordada por falta de tiempo (familia, trabajo, accidente, proyectos de otras materias, etc.) o incapacidad (no supo hacer las conexiones, programar, etc.).
+    }
+    \rubricdesc{Bien}{
+        Procrastina en pocas ocasiones o a veces olvida entregar evidencia de avance de forma regular, pero aún así entrega el proyecto a tiempo.
+    }
+    \rubricdesc{Distinguido}{
+        Entregó avances de forma regular y acabó el proyecto antes o el día de la fecha acordada.
+    }
+  }
+  }
+
+\end{rubrictable}
+
+\begin{rubrictable}{4}
+  % Add your \rubricdesc items in increasing order!
+  
+  \rubriccat{Seguridad y estética (x2)}{
+    \rubricdesc{Necesita mejorar}{
+        No hace esfuerzo alguno por tomar medidas de seguridad que atenten en contra de algún tercero. Parte del ensamblaje del proyecto está pegada con cinta o usando métodos poco seguros y confiables. 
+    }
+    \rubricdesc{Aprendiz}{
+        Se intentó tomar medidas de seguridad pero falló en cumplir varias de ellas. El proyecto muestra pocas señales de ser cuidadosamente trabajado, se encuentra maltratado o da la apariencia de ser improvisado.
+    }
+    \rubricdesc{Bien}{
+        Existen pequeños detalles pero el proyecto da la apariencia de ser seguro. Se hace uso de herramienta (tornillos, tuercas, etc.) para fijar las piezas o mecanismos de forma segura.
+    }
+    \rubricdesc{Distinguido}{
+        Se toman todas las medidas de seguridad posibles. Las piezas, conexiones y mecanismos del robot permanecen fijamente en el lugar que les corresponde a pesar de sufrir pequeños impactos. El proyecto es visualmente estético (color, forma, uso de LEDs como indicadores, etc.)
+    }
+  }
+  
+  \rubriccat{Simulación}{
+    \rubricdesc{Necesita mejorar}{
+        No existe simulación o se muestra algo completamente fuera de enfoque.
+    }
+    \rubricdesc{Aprendiz}{
+        La simulación no ilustra precisamente los objetivos del proyecto. \\
+    }
+    \rubricdesc{Bien}{
+        La simulación ilustra de manera precisa los objetivos del proyecto.
+    }
+    \rubricdesc{Distinguido}{
+        La simulación ilustra de manera precisa los objetivos del proyecto e incluye elementos que permiten interactividad (e.g: cambiar parámetros del sistema).
+    }
+  }
+  
+  \rubriccat{Documento}{
+    \rubricdesc{}{
+    }
+    \rubricdesc{}{
+    }
+    \rubricdesc{}{
+    }
+    \rubricdesc{*Nota}{
+        Ver rúbrica de reporte de investigación. Añadir sección de resultados hacia el final de la sección de desarrollo y antes de emitir conclusiones. Entregar engargolado.
+    }
+  }
+  
+\end{rubrictable}
+
+Notas:\\
+\begin{itemize}
+    \item Puntaje máximo: 66 puntos.
+    \item Si el reporte del proyecto no contiene portada o datos del equipo, pierde su validez.
+    \item El plagio es razón suficiente para invalidar el proyecto. Consultar el siguiente enlace para más información: https://scielo.conicyt.cl/scielo.php?script=sci\_arttext\&pid=S0718-07642008000400001
+\end{itemize}
+
+
+
+\end{document}
