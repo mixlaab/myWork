@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Weekly Timetable Calendar
+% LaTeX Template
+% Version 1.1 (4/6/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original calendar style author:
+% Evan Sultanik (http://www.sultanik.com/LaTeX_calendar_style)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the calendar.sty file to be in the same directory as the
+% .tex file. The calendar.sty file provides the necessary structure to create the
+% calendar.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[landscape,a4paper]{article}
+
+\usepackage{calendar} % Use the calendar.sty style
+
+\usepackage[landscape,margin=0.5in]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\begin{document}
+
+\pagestyle{empty} % Removes the page number from the bottom of the page
+
+\noindent
+
+\StartingDayNumber=1 % Calendar starting day, default of 1 means Sunday, 2 for Monday, etc
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\textsc{\LARGE Week work}\\ 
+\textsc{\large August-December Weeks}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\begin{calendar}{\hsize}
+
+%----------------------------------------------------------------------------------------
+%	FIRST DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{\textbf{All day} \daysep Rest, hobbies, family} % By default all daily events are centered in the box, in order to bring them up use \vspace{2cm} after the event text; you may need to change the 2cm
+
+%----------------------------------------------------------------------------------------
+%	SECOND DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{
+\textbf{7:00-10:00} \daysep Principios de programación - I203  \\[3pt]
+\textbf{11:00-13:00} \daysep Electrónica - B106 \\[3pt]
+\textbf{17:45-18:30} \daysep Servomecanismos - 9302 \\[3pt]
+\textbf{18:30-19:15} \daysep Servomecanismos - 3303 \\[3pt]
+\textbf{19:15-20:00} \daysep Sensores y Actuadores - 9203 \\[3pt]
+\textbf{20:00-20:45} \daysep Percepción - 9102 \\[3pt]
+\textbf{20:45-21:30} \daysep Percepción - 9102 \\[3pt]
+%\textbf{1pm-2pm} \daysep No Lecture \\[3pt]
+%\textbf{3pm-4pm} \daysep BIOSCI101 Laboratory \\[3pt]
+%\textbf{4pm-5pm} \daysep BIOSCI101 Laboratory
+} 
+
+%----------------------------------------------------------------------------------------
+%	THIRD DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Tuesday
+\textbf{9:00-13:00} \daysep Assessment and work - I002 \\[3pt]
+\textbf{13:00-16:00} \daysep Robotics Club - I002  \\[3pt]
+}
+
+%----------------------------------------------------------------------------------------
+%	FOURTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Wednesday
+\textbf{11:00-13:00} \daysep Electrónica
+ - B004 \\[3pt]
+%\textbf{11am-12pm} \daysep No Lecture \\[3pt]
+\textbf{17:45-18:30} \daysep Servomecanismos - 9302 \\[3pt]
+\textbf{18:30-19:15} \daysep Servomecanismos - 3303 \\[3pt]
+\textbf{19:15-20:00} \daysep Sensores y Actuadores - 9203 \\[3pt]
+\textbf{20:00-20:45} \daysep Percepción - 9102 \\[3pt]
+\textbf{20:45-21:30} \daysep Percepción - 9102 \\[3pt]
+} 
+
+%----------------------------------------------------------------------------------------
+%	FIFTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Thursday
+\textbf{11:00-13:00} \daysep Análisis y Diseño de Circuitos Eléctricos - C004\\[3pt]
+}
+%----------------------------------------------------------------------------------------
+%	SIXTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Friday
+\textbf{8:00-10:00} \daysep Análisis y Diseño de Circuitos Eléctricos - B104\\[3pt]
+\textbf{10:00-13:00} \daysep Principios de programación - I203 \\[3pt]
+\textbf{17:45-18:30} \daysep Servomecanismos - 9302 \\[3pt]
+\textbf{18:30-19:15} \daysep Servomecanismos - 3303 \\[3pt]
+\textbf{19:15-20:00} \daysep Sensores y Actuadores - 9203 \\[3pt]
+\textbf{20:00-20:45} \daysep Percepción - 9102 \\[3pt]
+\textbf{20:45-21:30} \daysep Percepción - 9102 \\[3pt]
+} 
+
+%----------------------------------------------------------------------------------------
+%	SEVENTH DAY
+%----------------------------------------------------------------------------------------
+
+\day{}{ % Saturday
+\textbf{10:00 - 13:00} \daysep Robotics Club\\[3pt]
+}
+%----------------------------------------------------------------------------------------
+ 
+\finishCalendar
+\end{calendar}
+\end{document}

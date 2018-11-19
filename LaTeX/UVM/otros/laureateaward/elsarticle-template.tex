@@ -1,0 +1,341 @@
+%%
+%% Copyright 2007, 2008, 2009 Elsevier Ltd
+%%
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%%
+
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+%%
+%%
+%%
+%% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
+%%
+%%
+\documentclass[preprint,12pt,3p]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% if you use PostScript figures in your article
+%% use the graphics package for simple commands
+%% \usepackage{graphics}
+%% or use the graphicx package for more complicated commands
+%% \usepackage{graphicx}
+%% or use the epsfig package if you prefer to use the old commands
+%% \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{gensymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%% \usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{pgfplotstable, booktabs}
+
+\journal{Nuclear Physics B}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\begin{center}
+    LAUREATE AWARD FOR EXCELLENCE IN ROBOTICS ENGINEERING
+\end{center}
+
+\begin{center}
+    \textbf{Fourth Edition: Environment and Sustainability}
+\end{center}
+
+\hline
+
+\bigskip
+\bigskip
+
+\title{Industrial robot for pick-and-place applications}% \texttt{elsartic} class}%\tnoteref{label0}}
+%\tnotetext[label0]{This is only an example}
+
+\author{Luis Gonzalo Morales García \footnote{Team Leader}}%\corref{cor1}\fnref{label3}}
+%\fntext[1]{Team Leader}
+
+%\cortext[cor1]{I am corresponding author}
+
+\ead{luisgonzalo96@gmail.com}
+%\ead[url]{author-one-homepage.com}
+
+%\footnotetext{Second footnote}
+
+\author{Diana Karen Basilio Beltrán \footnote{Team Member}, Luis Gerardo Reyes Cervantes \footnotemark[\value{footnote}]}
+%\fntext[2]{Team members}
+%\address[label5]{Some University}
+%\ead{author.two@mail.com}
+%\footnotetext{Second footnote}
+
+%\author{}
+%\ead{author.three@mail.com}
+
+\author{Víctor de Jesús Medrano Zarazúa \footnote{Coach}\\\\}
+%\ead{author.three@mail.com}
+
+%\bigskip
+%\bigskip
+
+\address{Universidad del Valle de México, Campus Monterrey}
+\address{Monterrey, Nuevo León, México}%\fnref{label4}}
+\address{luisgonzalo96@gmail.com}
+
+\begin{abstract}
+    Robotics can improve life quality of the society, production in the industry, logistic time improvements through the use of logical programs that together with sensors and actuators can achieve great goals, together we have created a robot that will upgrade the way the industry works. The purpose of this project is to make easier and faster the material transportation.
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+pick-and-place \sep mobile \sep industry
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%
+% \linenumbers
+
+%% main text
+\section{Introduction}
+\label{sec1}
+
+It has always been an arduous job to maintain an orderly and controlled inventory in the industry, for this reason we will focus on the design of a robot able to carry items and save them in the stores of the industries, allowing them to improve their flow of raw material inside and outside their establishment.
+
+This paper shows the technical description and material needed to accomplish the goal of placing the items in a small amount of time.
+% \subsection{Sample subsection}
+% \label{subsec1}
+
+% Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. 
+% Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. 
+% Sample text. 
+
+% %% The Appendices part is started with the command \appendix;
+% %% appendix sections are then done as normal sections
+% \appendix
+
+% \section{Section in Appendix}
+% \label{appendix-sec1}
+
+% Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. 
+% Sample text. Sample text. Sample text. Sample text. Sample text. Sample text. 
+% Sample text. 
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}         ==>>  [#]
+%%   \cite[chap. 2]{key} ==>> [#, chap. 2]
+%%
+
+
+%\label{sec2}
+\section{Function of components}
+
+To achieve the objective and fulfill the competition rules, a complete analysis of the necessary components was made. The following list shows a list of the main components and a brief description of its usefulness within the project:
+
+\begin{itemize}
+    \item LiPo Battery: stores a large amount of energy; enough to give life to our robot. 
+    
+    \item LiPo Balancer Charger: During the competition there are two rounds, between each round depending on the voltage that our battery has, we will charge this as many times as necessary, as well as to make tests before the competition.
+    
+    \item Circuit board: We will use a printed circuit whose function will be to control the speed and direction of rotation of the motors of our robot by means of the following electronic materials: MOSFET, couplers, resistors, base for circuit, terminal blocks and copper ceramic plate.
+
+    \item Microcontroller: This electronic board will be programmed to process and translate the electronic signals into actions that help us to achieve the goal.
+
+    \item Omni-wheels: These wheels are special because they allow our robot to move in any direction in a two-dimensional space.
+
+    \item Step-motor: This motor allows the robot to move the gripper up-and-down through an endless screw.
+
+    \item 360\degree \hspace{0.05cm} servo-motor: This motor opens and closes the gripper to take and leave the items.
+
+    \item Vex motors: These four motors are coupled to the omni-wheels and move the robot around the area.
+
+    \item Driver A4988: This driver controls the spin-direction of the step-motor.
+
+    \item Driver L298N: This driver controls the spin-direction of each one of the four motors, allowing to move in any direction of the plane.
+
+    \item 7805 Voltage regulator: Provides the needed output to avoid damage of the 5V components.
+
+    \item Acrylic, PLA and aluminum: The structure of the robot that supports all the parts and electronics.
+
+    \item Other materials: Screws, nuts, wires, rubber.
+
+\end{itemize}
+
+\newpage
+
+\section{Robot design}
+
+The robot is designed to satisfy mainly the next key points:
+
+\subsection{Objective}
+
+The following set of rules of the competition influenced the design and construction of the robot:
+
+\begin{itemize}
+
+    \item The robot must satisfy size and weight specifications.
+
+    \item The robot must start and finish in the marked yellow area (80 cm x 80 cm).
+    
+    \item The robot must be capable of picking and placing objects (dimension of objects: 15cm x 15 cm x 5cm).
+    
+    \item The objects must be placed inside the correct location so that both colors correspond. 
+    
+    \item Two objects can not be arranged horizontally on the same square. But they can be stacked vertically.
+\end{itemize}
+
+\subsection{Cost}
+
+Due to low budget, we designed a low cost robot manually-controlled using only the elemental components to achieve the desired goal.
+
+\bigskip
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    Material    & Cost (US Dollars) \\ \hline
+    Kit CNC     & 68.20             \\ \hline
+    Acrylic     & 67.50             \\ \hline
+    Electronics & 12.95             \\ \hline
+    Metal Forge & 16.00             \\ \hline
+    Mini-Arena  & 6.50              \\ \hline
+    Tools       & 103.21            \\ \hline
+    Motors      & 60.00             \\ \hline
+    Wheels      & 60.00             \\ \hline
+    \end{tabular}
+    \end{table}
+% {\centering
+% \pgfplotstableread{ % Read the data into a macro we call \datatable
+% Material Cost(US-Dollars)
+% %$KitCNC$  68.20
+% %$Acrylic$  67.50
+% %Electronics 12.95
+% %Metalforge 16.00
+% %Miniarena  6.50
+% %Tools 103.21 
+% %Motors 60
+% Wheels  60
+
+% }\datatable
+
+% %\end{centering}
+% % If your data is in a file called data.csv, you could also just do:
+% %\pgfplotstableread{data.csv}\datatable
+
+% \pgfplotstabletypeset[
+% columns/0/.style={column name={$Material$}}  % Set the name to be used for the first column
+% columns/1/.style={
+% column name=$Cost$,  % ... and the second
+% dec sep align,      % align on the decimal marker
+% /pgf/number format/fixed zerofill,  % print trailing zeros
+% /pgf/number format/precision=14     % print 14 digits
+% },
+% %columns/2/.style={
+% %column name=$y_i$,
+% %dec sep align,
+% %/pgf/number format/fixed zerofill,
+% %/pgf/number format/precision=14
+% %},
+% every head row/.style={
+% before row=\toprule,    % booktabs rules
+% after row=\midrule
+% },
+% every last row/.style={
+% after row=\bottomrule
+% }
+% ]{\datatable}
+
+% }
+
+\bigskip
+%\endcenter
+%\leftskip
+
+\subsection{Quality}
+
+Although the robot is low cost, the material was carefully selected to build a trustworthy and lightweight robot that will accomplish the main tasks.
+%\label{sec2}
+
+
+%% References with bibTeX database:
+
+\bibliographystyle{elsarticle-num}
+% \bibliographystyle{elsarticle-harv}
+% \bibliographystyle{elsarticle-num-names}
+% \bibliographystyle{model1a-num-names}
+% \bibliographystyle{model1b-num-names}
+% \bibliographystyle{model1c-num-names}
+% \bibliographystyle{model1-num-names}
+% \bibliographystyle{model2-names}
+% \bibliographystyle{model3a-num-names}
+% \bibliographystyle{model3-num-names}
+% \bibliographystyle{model4-names}
+% \bibliographystyle{model5-names}
+% \bibliographystyle{model6-num-names}
+
+\bibliography{sample}
+
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-num.tex'.

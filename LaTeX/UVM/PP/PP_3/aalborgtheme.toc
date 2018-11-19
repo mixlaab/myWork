@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Repaso}{3}{0}{1}
+\beamer@sectionintoc {2}{Introducci\IeC {\'o}n}{4}{0}{2}
+\beamer@sectionintoc {3}{Issues}{5}{0}{3}
+\beamer@sectionintoc {4}{Tarea}{26}{0}{4}
+\beamer@sectionintoc {5}{Informaci\IeC {\'o}n de contacto}{27}{0}{5}

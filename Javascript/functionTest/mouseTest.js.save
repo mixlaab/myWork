@@ -1,0 +1,22 @@
+function setup() {
+  createCanvas(500, 500);
+  background(0);
+  console.log(on);
+}
+
+function draw() {
+  if(!on){
+    background(0);
+  }
+  else{
+    background(255);
+  }
+  console.log(on);
+  //print("x: ", circle.x, "y: ", circle.y);
+}
+
+function mousePressed(){
+  on = !on;
+}
+
+

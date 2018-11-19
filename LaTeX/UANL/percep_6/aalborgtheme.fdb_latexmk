@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1535902710 "/home/vdejesus/MEGA/Programas/LaTeX/UANL/percep_6/aalborgtheme.tex" "aalborgtheme.pdf" "aalborgtheme" 1535902713
+["pdflatex"] 1535902710 "/home/vdejesus/MEGA/Programas/LaTeX/UANL/percep_6/aalborgtheme.tex" "aalborgtheme.pdf" "aalborgtheme" 1538057773
   "/etc/texmf/web2c/texmf.cnf" 1503857794 1101 af7716885e081ab43982cab7b4672c1a ""
   "/home/vdejesus/MEGA/Programas/LaTeX/UANL/percep_6/aalborgtheme.tex" 1535902629 14694 93010cd8f192150cce4711f8c65d53d1 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -261,10 +261,10 @@
   "tangananica2.PNG" 1535902490 35545 7739c629c299fdd6f4dfab8f19278023 ""
   "tangananicabranch.PNG" 1535902490 22990 80dffea3f0e9ea48a56ecab1c6c53add ""
   (generated)
-  "aalborgtheme.pdf"
-  "aalborgtheme.nav"
+  "aalborgtheme.aux"
   "aalborgtheme.snm"
+  "aalborgtheme.out"
   "aalborgtheme.toc"
   "aalborgtheme.log"
-  "aalborgtheme.out"
-  "aalborgtheme.aux"
+  "aalborgtheme.nav"
+  "aalborgtheme.pdf"
