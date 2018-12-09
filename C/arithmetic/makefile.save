@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wmissing-prototypes
+OBJS = cs50.o
+
+all: mai: $(OBJS)
+    $(CC) $(CFLAGS) $(OBJS) -o sysstatd
+
+server.o: server.c
+    $(CC) $(CFLAGS) -c server.c
+
+rio.o: rio.c rio.h
+    $(CC) $(CFLAGS) -c rio.c
+
+clean:
+    rm -f *~ *.o sysstatd
