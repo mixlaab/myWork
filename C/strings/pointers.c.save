@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void){
+	string s = get_string("Enter name 1: ");
+	string t = get_string("Enter name 2: ");
+
+	if (s == t){
+		printf("Same\n");
+	}
+	else{
+		printf("Different\n");
+	}
+}

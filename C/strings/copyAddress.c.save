@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <cs50.h>
+#include <ctype.h>
+
+int main(void){
+	char *orig = get_string("Enter a name: ");
+	char *copy = *orig;
+
+	if(strlen(orig)){
+		
+	}
+}
+
+char toUpper(char letra){
+	if (letra >= 97 || letra <= 122){
+		letra =-32;
+	}
+	return letra;
+}

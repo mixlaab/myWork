@@ -20,11 +20,13 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(255,0,0);
   showBall();
   moveBall();
   bounceBall();
-  //print("x: ", circle.x, "y: ", circle.y);
+  textSize(70);
+  text("Hola mundo", 250,250);
+  print("x: ", circle.x, "y: ", circle.y);
 }
 
 function showBall() {
