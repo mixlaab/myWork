@@ -1,0 +1,16 @@
+import cv2
+import numpy as np
+img = cv2.imread("color_balls_small.png")
+imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+cv2.imshow('image',img)
+lower_red1 = np.array([0,120,120])
+upper_red1 = np.array([30,255,255])
+lower_red2 = np.array([150,120,120])
+upper_red2 = np.array([180,255,255])
+redMask1 = cv2.inRange(imgHSV,lower_red1,upper_red1)
+redMask2 = cv2.inRange(imgHSV,lower_red2,upper_red2)
+combinedMask = cv2.add(redMask1,redMask2)
+cv2.imshow('mask',combinedMask)
+res = cv2.bitwise_and(img, img, mask=combinedMask)
+cv2.imshow('red',res)
+cv2.waitKey(0)

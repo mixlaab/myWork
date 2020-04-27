@@ -1,0 +1,81 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<type 'numpy.ndarray'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "import cv2\n",
+    "import numpy as np\n",
+    "img = cv2.imread('colorBalls.jpg')\n",
+    "print(type(img))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import cv2\n",
+    "import numpy as np\n",
+    "\n",
+    "img = np.zeros([200,200,3])\n",
+    "\n",
+    "img[:,:,0] = np.zeros([200,200])\n",
+    "img[:,:,1] = np.zeros([200,200])\n",
+    "img[:,:,2] = np.zeros([200,200])\n",
+    "\n",
+    "for i in range (200/3):\n",
+    "    for j in range(200):\n",
+    "        img[i,j,0] = 255\n",
+    "for i in range (200/3, 2*200/3):\n",
+    "    for j in range(200):\n",
+    "        img[i,j,1] = 255\n",
+    "for i in range (2*200/3, 200):\n",
+    "    for j in range(200):\n",
+    "        img[i,j,2] = 255\n",
+    "cv2.imwrite('color_img.jpg', img)\n",
+    "cv2.imshow(\"image\", img)\n",
+    "cv2.waitKey()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

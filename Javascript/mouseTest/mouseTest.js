@@ -1,24 +1,18 @@
-var on = false;
+var dias = ["lunes", "martes","miércoles","jueves"];
+var index = 0;
 
 function setup() {
-  createCanvas(500, 500);
-  background(0);
-  console.log(on);
+  createCanvas(500, 500);  
+  background(255);
 }
 
 function draw() {
-  if(!on){
-    background(0);
-  }
-  else{
-    background(255);
-  }
-  console.log(on);
-  //print("x: ", circle.x, "y: ", circle.y);
+    text(dias[index], width/2, height/2);
 }
 
 function mousePressed(){
-  on = !on;
+    index = index + 1;
 }
+
 
 
